@@ -1,10 +1,7 @@
 package com.project.springbootproject.dto;
 
 import com.project.springbootproject.domain.entity.BoardEntity;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -32,6 +29,7 @@ public class BoardDto {
         return boardEntity;
     }
 
+    @Builder
     public BoardDto(Long id, String writer, String title, String content, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.writer = writer;
